@@ -256,4 +256,9 @@ form {
     .info-box {
         width: calc(0.8*1000px);
     }
+
+    .confirmation-box {
+            display: grid;
+            grid-template-columns: calc(1000px*0.03) 1fr calc(1000px*0.15) 1fr calc(1000px*0.03);
+    }
 }
