@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osterfeier</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Gidole&family=Kranky&family=Londrina+Solid:wght@100;300;400;900&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <aside class="good">
+        <div class="aside-content">
+            <h1>SUPER!</h1>
+            <p class="aside-p">Wir freuen uns auf dich sehr, <span class="kind-name"></span>!</p>
+        </div>
+    </aside>
+    <aside class="bad">
+        <div class="aside-content">
+            <h1>SCHADE!</h1>
+            <p class="aside-p">Hoffentlich klappt es nächstes Mal, <span class="kind-name-bad"></span>!</p>
+        </div>
+    </aside>
+
+    <div class="container">
+        <h1>OSTERFEIER</h1>
+        <p class="paragraph">Wir laden Dich herzlich zu Osterfeier bei Radek ein!</p>
+
+        <div class="info-box">
+            <h2>INFO</h2>
+            <ul class="info-list">
+                <li>
+                    <strong class="question">WANN:</strong>
+                    <span>Donnerstag den 10.4.2025, 15 Uhr bis 17 Uhr</span>
+                </li>
+                <li>
+                    <strong class="question">WO:</strong>
+                    <span>Robert-Klett-Ring 6</span>
+                </li>
+                <li>
+                    <strong class="question">WAS:</strong>
+                    <span>Osterbasteln, Spielen, Oster-Kafeetrinken für Eltern</span>
+                </li>
+                <li>
+                    <strong class="question">KONTAKT:</strong>
+                    <span>Radeks Mutti, Lenka: 01745957425</span>
+                </li>
+            </ul>
+            <p class="note">Eltern und kleine Geschwister können gerne mitkommen. ☺️</p>
+        
+            <form method="POST" accept-charset="UTF-8" id="form">
+                <p class="description">Möchtest du teilnehmen,<br>
+                    <input placeholder="dein Name" class="description" type="text" name="name" required>
+                    ?
+                </p>
+                <p class="error-message">Bitte gib deinen Namen ein</p>
+            
+            
+                <div class="confirmation-box">
+                    <button name="yes" class="yes">JA</button>
+                    <button name="no" class="no">NEIN</button>
+                </div>
+                <input type="hidden" name="_gotcha" style="display:none !important">
+            </form>
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

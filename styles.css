@@ -1,0 +1,259 @@
+body {
+    
+    background-color: #f8f3e7;
+    background-image: url(oster2.webp);
+    background-size: cover;
+    background-position: top;
+    font-family: "Londrina Solid", sans-serif;
+    font-weight: 300;
+    color: black;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 5vw;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Soft pastel orange */
+    padding: 20px;
+    width: 80%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+h1 {
+    /* Warm Easter brown-orange */
+    font-size: 14vw;
+    margin-bottom: 10px;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+}
+
+.paragraph {
+    margin-bottom: 15px;
+}
+
+.info-box {
+    background-color: #fde5d4dd;
+    
+    /* Light peach pastel */
+    padding: 15px;
+    border-radius: 13px;
+    width: 100%;
+    margin: 10px 0;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+h2 {
+    /* Soft brown-red */
+    margin-bottom: 8px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0 1.3em;
+    text-align: left;
+}
+
+ul li {
+    font-size: 4.5vw;
+    padding: 0.5em 0;
+}
+
+.description {
+    font-size: 5.5vw;
+    margin: 0.5em 0 0 0;
+}
+
+input.description {
+    width: 80%;
+    font-family: "Londrina Solid", sans-serif;
+    border-radius: 10px;
+    background-color: #B58B94;
+    color: black;
+    text-align: center;
+    padding: 0.2em;
+    border: 0;
+    opacity: 0.85;
+}
+
+input.description::placeholder {
+    color: #7d6167;
+}
+
+.confirmation-box {
+    display: grid;
+    grid-template-columns: 3vw 1fr 15vw 1fr 3vw;
+    width: 100%;
+    gap: 10px;
+}
+
+.note {
+    padding: 1em 0 1em 0;
+    position: relative;
+}
+
+.note::before,
+.note::after {
+    content: '';
+    /* Needed to create the pseudo-elements */
+    position: absolute;
+    width: 20%;
+    /* 40% of the width */
+    height: 2px;
+    /* Thin line for the border */
+    background-color: black;
+    /* Border color */
+}
+
+.note::before {
+    top: 0;
+    /* Position the top border */
+    left: 50%;
+    /* Position the border in the center */
+    transform: translateX(-50%);
+    /* Adjust the border to be centered */
+}
+
+.note::after {
+    bottom: 0;
+    /* Position the bottom border */
+    left: 50%;
+    /* Position the border in the center */
+    transform: translateX(-50%);
+    /* Adjust the border to be centered */
+}
+
+.question {
+    margin-right: 0.2em
+}
+
+button {
+    padding: 0.5em 1.5em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    font-size: 5vw;
+    opacity: 0.7;
+    font-family: "Londrina Solid", sans-serif;
+}
+
+.yes {
+    grid-column: 2;
+    background-color: #BFBD65;
+    /* Soft pastel green */
+    color: #2d572c;
+}
+
+.yes:hover {
+    background-color: #BFBD65;
+}
+
+.no {
+    grid-column: 4;
+    background-color: #e8a8a8;
+    /* Soft pastel red-pink */
+    color: #7a2c2c;
+}
+
+.no:hover {
+    background-color: #e48b8b;
+}
+
+
+aside {
+    position: fixed;
+    box-sizing: border-box;
+    padding: 1em;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 100%;
+    z-index: 10;
+    opacity: 99%;
+    transition: transform 1000ms;
+    background-color: rgb(17, 57, 17);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white
+}
+
+aside.open {
+    transform: translateX(-100%);
+}
+
+.aside-p {
+    font-size: 5.5vw;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.kind-name, .kind-name-bad {
+    font-weight: 800;
+}
+
+.invalid {
+    border: 2px solid red !important;
+    background-color: #e48b8b;
+}
+
+.invalid:focus {
+    border: 2px solid red !important;
+    background-color: #e48b8b;
+}
+
+.error-message {
+    color: red;
+    visibility: hidden;
+    margin: 0.3em 0;
+}
+
+@media all and (min-width: 600px) {
+    .container {
+        font-size: calc(600px*0.05);
+    }
+
+    h1 {
+        font-size: calc(600px*0.14);
+    }
+
+    .description {
+        font-size: calc(600px*0.055);
+    }
+
+    ul li {
+        font-size: calc(600px*0.045);
+    }
+
+    .aside-p {
+        font-size: calc(600px*0.055);
+    }
+
+
+    button {
+        font-size: calc(600px*0.05);
+    }
+}
+
+@media all and (min-width: 1000px) {
+    .info-box {
+        width: calc(0.8*1000px);
+    }
+}
